@@ -32,7 +32,7 @@ public class FinanceController : MonoBehaviour
         {
             counterText.text = money.ToString();
         }
-        
+
         if (sceneName == "FamilyScene")
         {
             savingsText.text = "You have earned " + money.ToString() + " monis today";
@@ -54,7 +54,7 @@ public class FinanceController : MonoBehaviour
 
     public void PlayerReward()
     {
-        if(hazardController.checkDeactivatedHazards() == true)
+        if (hazardController.checkDeactivatedHazards() == true)
         {
             Debug.Log("YOU HAVE MISSED HAZARD");
         }
