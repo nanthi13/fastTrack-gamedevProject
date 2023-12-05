@@ -11,9 +11,10 @@ public class FinanceController : MonoBehaviour
 {
     HazardController hazardController;
     public TextMeshProUGUI counterText;
-    public TextMeshProUGUI savingsText;
-    static int money;
-    static int totalMoney;
+    public static int money;
+    public static int totalMoney;
+    public static int numberPassed;
+    public static int numberFailed;
     String sceneName;
 
     // Start is called before the first frame update
@@ -22,22 +23,7 @@ public class FinanceController : MonoBehaviour
         UnityEngine.SceneManagement.Scene currentScene = SceneManager.GetActiveScene();
 
         sceneName = currentScene.name;
-        money = 0;
         hazardController = GameObject.Find("HazardController").GetComponent<HazardController>();
-    }
-
-    void Update()
-    {
-        if (sceneName == "GameplayScene")
-        {
-            counterText.text = money.ToString();
-        }
-        
-        if (sceneName == "FamilyScene")
-        {
-            savingsText.text = "You have earned " + money.ToString() + " monis today";
-            savingsText.text = "You have a a total of " + totalMoney.ToString() + " money";
-        }
     }
 
     public int GetScore()
@@ -52,16 +38,24 @@ public class FinanceController : MonoBehaviour
         sceneName = currentScene.name;
     }
 
+    public static void ResetForNextDay()
+    {
+        money = 0;
+        numberPassed = 0;
+        numberFailed = 0;
+    }
+
     public void PlayerReward()
     {
         if(hazardController.checkDeactivatedHazards() == true)
         {
             Debug.Log("YOU HAVE MISSED HAZARD");
+            numberFailed++;
         }
         else
         {
             Debug.Log("No hazards missed. have moni");
-            money = money + 50;
+            numberPassed++;
         }
     }
 }
