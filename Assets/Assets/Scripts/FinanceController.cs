@@ -27,20 +27,6 @@ public class FinanceController : MonoBehaviour
         hazardController = GameObject.Find("HazardController").GetComponent<HazardController>();
     }
 
-    void Update()
-    {
-        if (sceneName == "GameplayScene")
-        {
-            counterText.text = money.ToString();
-        }
-        
-        if (sceneName == "FamilyScene")
-        {
-            savingsText.text = "You have earned " + money.ToString() + " monis today";
-            savingsText.text = "You have a a total of " + totalMoney.ToString() + " money";
-        }
-    }
-
     public int GetScore()
     {
         return money;

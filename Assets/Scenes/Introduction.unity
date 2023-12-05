@@ -272,7 +272,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Welcome to [City Name] International Airport, a bustling hub in a dystopian
+  m_text: 'Welcome to Vista International Airport, a bustling hub in a dystopian
     world where stringent security measures and government control are the order
     of the day. In this high-stakes environment, you assume the role of a dedicated
     security guard at the airport, tasked with ensuring the safety and compliance
@@ -315,8 +315,8 @@ MonoBehaviour:
 
 
 
-    Welcome to [City Name] International Airport,
-    where your choices define your journey.'
+    Welcome to Vista International Airport, where
+    your choices define your journey.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
