@@ -39,12 +39,16 @@ public class FinanceController : MonoBehaviour
         {
             savingsText.text = "You have earned " + money.ToString() + " monis today";
             savingsText.text = "You have a a total of " + totalMoney.ToString() + " money";
+
+            // if money is less than x amount than invoke gameover menu
+            // otherwise  proceed to next level
             if (totalMoney < 1000)
             {
-                Debug.Log("gameover");
+
+                Debug.Log("gameover1");
 
                 OnPlayerGameOver?.Invoke();
-                Time.timeScale = 0f;
+                //Time.timeScale = 0f;
             }
 
         }
@@ -63,26 +67,26 @@ public class FinanceController : MonoBehaviour
         }
     }
 
-    public void FinishDayFinance1()
-    {
-        totalMoney = totalMoney + money;
-        // if money is less than x amount than invoke gameover menu
-        // otherwise  proceed to next level
-        if (totalMoney < 1000)
-        {
+    // public void FinishDayFinance1()
+    // {
+    //     totalMoney = totalMoney + money;
+    //     // if money is less than x amount than invoke gameover menu
+    //     // otherwise  proceed to next level
+    //     if (totalMoney < 1000)
+    //     {
 
-            OnPlayerGameOver?.Invoke();
-            Time.timeScale = 0f;
+    //         OnPlayerGameOver?.Invoke();
+    //         Time.timeScale = 0f;
 
 
-        }
-        else
-        {
+    //     }
+    //     else
+    //     {
 
-            UnityEngine.SceneManagement.Scene currentScene = SceneManager.GetActiveScene();
-            sceneName = currentScene.name;
-        }
-    }
+    //         UnityEngine.SceneManagement.Scene currentScene = SceneManager.GetActiveScene();
+    //         sceneName = currentScene.name;
+    //     }
+    // }
 
     public void FinishDayFinance()
     {
@@ -93,13 +97,6 @@ public class FinanceController : MonoBehaviour
 
         UnityEngine.SceneManagement.Scene currentScene = SceneManager.GetActiveScene();
         sceneName = currentScene.name;
-        if (totalMoney < 1000)
-        {
-            Debug.Log("gameover");
-
-            OnPlayerGameOver?.Invoke();
-            //Time.timeScale = 0f;
-        }
 
 
 
