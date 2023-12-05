@@ -15,11 +15,14 @@ public class GameAssets : MonoBehaviour
 
     public Sprite TravelerSprite1;
     public Sprite TravelerSprite2;
-    public Sprite TravelerSprite3;
     
     public Sprite LuggageSprite1;
     public Sprite LuggageInside1;
 
-    public Sprite HazardSprite;
-    public Sprite NonHazardSprite;
+    public Sprite HazardSprite1;
+    public Sprite HazardSprite2;
+    public Sprite HazardSprite3;
+    public Sprite NonHazardSprite1;
+    public Sprite NonHazardSprite2;
+    public Sprite NonHazardSprite3;
 }

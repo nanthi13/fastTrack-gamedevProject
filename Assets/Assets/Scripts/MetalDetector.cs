@@ -11,18 +11,19 @@ public class MetalDetector : MonoBehaviour
     private bool currentlyBlinking = false;
     
     
+    
     void Start()
     {
-        metalHazard = GameObject.Find("MetalHazard").GetComponent<MetalHazard>();
         metalDetectorBlinker.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
+        //metalHazard = GameObject.Find("MetalHazard(Clone)").GetComponent<MetalHazard>();
+
         distance = Vector3.Distance(this.gameObject.transform.position, metalHazard.transform.position);
         
-
         if (distance < 3 && distance > 2 && !currentlyBlinking)
         {
             StartCoroutine(Blinking(2));
