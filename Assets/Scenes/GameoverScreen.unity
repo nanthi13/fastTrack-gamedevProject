@@ -191,6 +191,67 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &829289241
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 79156723377049411, guid: 3894bc4562a9c48fa8960bc992a37a23, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2ecf6dea597c943a092e6791ffb685ac, type: 3}
+    - target: {fileID: 4328360923208857337, guid: 3894bc4562a9c48fa8960bc992a37a23, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.908183
+      objectReference: {fileID: 0}
+    - target: {fileID: 4328360923208857337, guid: 3894bc4562a9c48fa8960bc992a37a23, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.291288
+      objectReference: {fileID: 0}
+    - target: {fileID: 4328360923208857337, guid: 3894bc4562a9c48fa8960bc992a37a23, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.23414202
+      objectReference: {fileID: 0}
+    - target: {fileID: 4328360923208857337, guid: 3894bc4562a9c48fa8960bc992a37a23, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4328360923208857337, guid: 3894bc4562a9c48fa8960bc992a37a23, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4328360923208857337, guid: 3894bc4562a9c48fa8960bc992a37a23, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4328360923208857337, guid: 3894bc4562a9c48fa8960bc992a37a23, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4328360923208857337, guid: 3894bc4562a9c48fa8960bc992a37a23, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4328360923208857337, guid: 3894bc4562a9c48fa8960bc992a37a23, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4328360923208857337, guid: 3894bc4562a9c48fa8960bc992a37a23, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6010097347188445349, guid: 3894bc4562a9c48fa8960bc992a37a23, type: 3}
+      propertyPath: m_Name
+      value: Audio
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3894bc4562a9c48fa8960bc992a37a23, type: 3}
 --- !u!1 &869459371
 GameObject:
   m_ObjectHideFlags: 0
@@ -418,7 +479,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4470348230308384121, guid: 00f3c6415c7da4c21a4716a31c1913e2, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4577738199419358866, guid: 00f3c6415c7da4c21a4716a31c1913e2, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4577738199419358866, guid: 00f3c6415c7da4c21a4716a31c1913e2, type: 3}
+      propertyPath: m_Color.b
+      value: 0.13541298
+      objectReference: {fileID: 0}
+    - target: {fileID: 4577738199419358866, guid: 00f3c6415c7da4c21a4716a31c1913e2, type: 3}
+      propertyPath: m_Color.g
+      value: 0.13541298
+      objectReference: {fileID: 0}
+    - target: {fileID: 4577738199419358866, guid: 00f3c6415c7da4c21a4716a31c1913e2, type: 3}
+      propertyPath: m_Color.r
+      value: 0.16037738
+      objectReference: {fileID: 0}
+    - target: {fileID: 6116037208424232889, guid: 00f3c6415c7da4c21a4716a31c1913e2, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.32079923
+      objectReference: {fileID: 0}
+    - target: {fileID: 6116037208424232889, guid: 00f3c6415c7da4c21a4716a31c1913e2, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.32079923
+      objectReference: {fileID: 0}
+    - target: {fileID: 6116037208424232889, guid: 00f3c6415c7da4c21a4716a31c1913e2, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.8396226
+      objectReference: {fileID: 0}
+    - target: {fileID: 6116037208424232889, guid: 00f3c6415c7da4c21a4716a31c1913e2, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4283585238
       objectReference: {fileID: 0}
     - target: {fileID: 7834796807979013139, guid: 00f3c6415c7da4c21a4716a31c1913e2, type: 3}
       propertyPath: m_Pivot.x
@@ -512,3 +605,4 @@ SceneRoots:
   - {fileID: 869459374}
   - {fileID: 877058072}
   - {fileID: 397926857}
+  - {fileID: 829289241}

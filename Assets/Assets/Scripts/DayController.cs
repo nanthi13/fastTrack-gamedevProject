@@ -14,7 +14,7 @@ public class DayController : MonoBehaviour
     public TextMeshProUGUI hourText;
     public TextMeshProUGUI minuteText;
     public TextMeshProUGUI MeridienText;
-    
+
     SceneChanger sceneChanger;
     FinanceController financeController;
 
@@ -84,9 +84,10 @@ public class DayController : MonoBehaviour
             if (day <= 11)
             {
                 day += 1;
-            } else
+            }
+            else
             {
-                sceneChanger.ChangeToFamilyView(); // TODO: change to win page
+                sceneChanger.ChangeToWinScreen();
             }
         }
     }

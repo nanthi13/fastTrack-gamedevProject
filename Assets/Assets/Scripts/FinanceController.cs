@@ -34,32 +34,14 @@ public class FinanceController : MonoBehaviour
 
     public void checkIfGameOver()
     {
-        if (totalMoney < 1000)
+        if (totalMoney < 0)
         {
-            OnPlayerGameOver?.Invoke();
+            Debug.Log("loading gameover");
+            SceneManager.LoadScene("GameoverScreen");
         }
     }
 
-    // public void FinishDayFinance1()
-    // {
-    //     totalMoney = totalMoney + money;
-    //     // if money is less than x amount than invoke gameover menu
-    //     // otherwise  proceed to next level
-    //     if (totalMoney < 1000)
-    //     {
 
-    //         OnPlayerGameOver?.Invoke();
-    //         Time.timeScale = 0f;
-
-
-    //     }
-    //     else
-    //     {
-
-    //         UnityEngine.SceneManagement.Scene currentScene = SceneManager.GetActiveScene();
-    //         sceneName = currentScene.name;
-    //     }
-    // }
 
     public void FinishDayFinance()
     {

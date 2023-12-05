@@ -50,6 +50,8 @@ public class FamilyController : MonoBehaviour
 
     private int increaseDiffEveryXDays = 4;
 
+    public static event Action OnPlayerGameOver;
+
     public void Start()
     {
         medicineCost = 0;
@@ -81,11 +83,13 @@ public class FamilyController : MonoBehaviour
             if ((FinanceController.totalMoney + GetTotalIncome() - GetTotalExpenses()) < 10)
             {
                 momButton.GetComponent<Button>().interactable = false;
-            } else
+            }
+            else
             {
                 momButton.GetComponent<Button>().interactable = true;
             }
-        } else
+        }
+        else
         {
             momButton.SetActive(false);
         }
@@ -156,7 +160,7 @@ public class FamilyController : MonoBehaviour
             electricityCost += 1;
             SetEventText("Living Costs increased!");
         }
-        
+
         newBalanceText.text = "$" + (FinanceController.totalMoney + GetTotalIncome() - GetTotalExpenses()).ToString();
         if ((FinanceController.totalMoney + GetTotalIncome() - GetTotalExpenses()) >= 0)
         {
@@ -179,7 +183,8 @@ public class FamilyController : MonoBehaviour
         {
             medicineDisplay.SetActive(true);
             medicineText.text = medicineCost.ToString();
-        } else
+        }
+        else
         {
             medicineDisplay.SetActive(false);
         }
@@ -257,7 +262,8 @@ public class FamilyMember
         if (status == Status.Ok && luck <= 2.5)
         {
             Infect();
-        } else if (status == Status.Sick && luck >= 6.5) 
+        }
+        else if (status == Status.Sick && luck >= 6.5)
         {
             Kill();
         }
