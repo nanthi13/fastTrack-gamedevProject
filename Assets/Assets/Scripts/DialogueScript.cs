@@ -17,6 +17,11 @@ public class DialogueScript : MonoBehaviour
 
     private bool isDeactivated;
 
+    private void OnDisable()
+    {
+        Debug.Log("onDisableIsRunning");
+    }
+
 
 
     // Start is called before the first frame update

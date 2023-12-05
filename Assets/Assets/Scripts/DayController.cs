@@ -9,6 +9,7 @@ public class DayController : MonoBehaviour
     int hours;
     int minutes;
     String meridien;
+    public static int day = 0;
 
     public TextMeshProUGUI hourText;
     public TextMeshProUGUI minuteText;
@@ -23,6 +24,7 @@ public class DayController : MonoBehaviour
     {
         sceneChanger = GameObject.Find("SceneChanger").GetComponent<SceneChanger>();
         financeController = GameObject.Find("FinanceController").GetComponent<FinanceController>();
+        FinanceController.ResetForNextDay();
 
         hours = 9;
         minutes = 00;
@@ -79,6 +81,13 @@ public class DayController : MonoBehaviour
         {
             financeController.FinishDayFinance();
             sceneChanger.ChangeToFamilyView();
+            if (day <= 11)
+            {
+                day += 1;
+            } else
+            {
+                sceneChanger.ChangeToFamilyView(); // TODO: change to win page
+            }
         }
     }
 }
