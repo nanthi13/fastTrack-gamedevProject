@@ -272,51 +272,31 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Welcome to Vista International Airport, a bustling hub in a dystopian
+  m_text: "Welcome to Vista International Airport, a bustling hub in a dystopian
     world where stringent security measures and government control are the order
     of the day. In this high-stakes environment, you assume the role of a dedicated
     security guard at the airport, tasked with ensuring the safety and compliance
-    of travelers.
-
-
-
-    As a committed family person, your objective is clear yet
-    challenging: survive the next 10 years while safeguarding the health and well-being
+    of travelers. \r\n\r\nAs a committed family person, your objective is clear yet
+    challenging: survive the next 12 months while safeguarding the health and well-being
     of your family. Your family comprises your wife, your son, and your ailing mother,
     all of whom depend on you for their security and livelihood. Every decision you
-    make in the airport''s security checkpoint has a direct impact on their lives.
-
-
-
-    However,
-    there''s an additional layer of complexity to your role. Your livelihood is tied
-    to the number of passengers that successfully pass through the security control.
-    For every individual cleared without incident, your paycheck grows, providing
-    crucial funds for your family. On the flip side, for every passenger caught with
-    illegal items, a portion of your earnings is deducted as a penalty.
-
-
-
-    Will
-    you prioritize financial stability and bend the rules to ensure more passengers
-    clear security, or will you uphold the strict regulations, risking financial
-    strain for the sake of your principles? The delicate balance between providing
-    for your family and maintaining the integrity of your job adds another layer
-    of complexity to your daily decisions.
-
-
-
-    Survive the next 10 years, navigate
-    moral dilemmas, and witness the repercussions of your decisions in this gripping
-    narrative-driven game. Can you balance the financial demands of your job with
-    the moral challenges of being a security guard in a dystopian airport, or will
-    the consequences of your choices haunt you forever? The countdown begins, and
-    every decision holds weight.
-
-
-
-    Welcome to Vista International Airport, where
-    your choices define your journey.'
+    make in the airport's security checkpoint has a direct impact on their lives.
+    \r\n\r\nHowever, there's an additional layer of complexity to your role. Your
+    livelihood is tied to the number of passengers that successfully pass through
+    the security control. For every individual cleared without incident, your paycheck
+    grows, providing crucial funds for your family. On the flip side, for every passenger
+    that slips through with illegal items, a portion of your earnings is deducted
+    as a penalty. \r\n\r\nWill you prioritize financial stability and bend the rules
+    to ensure more passengers clear security, or will you uphold the strict regulations,
+    risking financial strain for the sake of your principles? The delicate balance
+    between providing for your family and maintaining the integrity of your job adds
+    another layer of complexity to your daily decisions. \r\n\r\nSurvive the next
+    12 months, navigate moral dilemmas, and witness the repercussions of your decisions
+    in this gripping narrative-driven game. Can you balance the financial demands
+    of your job with the moral challenges of being a security guard in a dystopian
+    airport, or will the consequences of your choices haunt you forever? The countdown
+    begins, and every decision holds weight. \r\n\r\nWelcome to Vista International
+    Airport, where your choices define your journey. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
