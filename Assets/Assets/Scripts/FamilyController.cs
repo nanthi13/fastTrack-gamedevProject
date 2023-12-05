@@ -46,7 +46,7 @@ public class FamilyController : MonoBehaviour
     public static int medicinePrice = 10;
 
     public static int incomePerPass = 15;
-    public static int penaltyPerIllegalPass = 25;
+    public static int penaltyPerIllegalPass = 20;
 
     private int increaseDiffEveryXDays = 4;
 

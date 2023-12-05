@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &25946138 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4470348230308384121, guid: 00f3c6415c7da4c21a4716a31c1913e2, type: 3}
-  m_PrefabInstance: {fileID: 2132076884}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &66406753
 GameObject:
   m_ObjectHideFlags: 0
@@ -5557,14 +5552,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 2750214294967525382, guid: 7e602f874c0d64e159b2f8eb860336ce, type: 3}
-      insertIndex: 0
-      addedObject: {fileID: 1432032544}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 695177670319179860, guid: 7e602f874c0d64e159b2f8eb860336ce, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 975180312}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e602f874c0d64e159b2f8eb860336ce, type: 3}
 --- !u!4 &6400385303117921325
 Transform:
@@ -5627,7 +5616,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateController: {fileID: 7555301080292784854}
-  travelerCharacter: {fileID: 0}
+  travelerCharacter: {fileID: 21300000, guid: 874e7477b0ff44434a915f9fedfde698, type: 3}
   speed: 3
   smoothTime: 0.5
   target: {x: -2.6, y: -6.94, z: -0.4}
@@ -5771,3 +5760,4 @@ SceneRoots:
   - {fileID: 2124997237947140869}
   - {fileID: 1947036379}
   - {fileID: 369120857}
+  - {fileID: 2132076884}

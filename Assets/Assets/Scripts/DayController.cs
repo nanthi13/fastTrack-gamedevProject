@@ -30,7 +30,7 @@ public class DayController : MonoBehaviour
         minutes = 00;
         meridien = "AM";
 
-        InvokeRepeating("TrackTime", 0, 0.5f);
+        InvokeRepeating("TrackTime", 0, 2.0f);
     }
 
     void TrackTime()

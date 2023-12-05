@@ -14,7 +14,7 @@ public class SceneChanger : MonoBehaviour
 
     public void ChangeToGameplayView()
     {
-        if (FinanceController.totalMoney > 0)
+        if (FinanceController.totalMoney >= 0)
         {
             Debug.Log("loading gameplay");
             SceneManager.LoadScene("GameplayScene");
