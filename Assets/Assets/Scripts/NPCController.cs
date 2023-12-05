@@ -1,25 +1,32 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Experimental.AI;
 
 public class NPCController : MonoBehaviour
 {
     private GameObject travelerSprite;
+    public StateController stateController;
+    public Sprite travelerCharacter;
 
-    public float speed = 3;
+    public float speed = 5;
     public float smoothTime = 0.5f;
     public Vector3 target = new Vector3(6.3f, -1.8f, 0);
-    public Vector3 offScreenTarget = new Vector3(8.0f, -1.8f, 0);
-    public Vector3 startingLocation = new Vector3(-19.6f, 0.8f, -0.1f);
+    public Vector3 offScreenTarget = new Vector3(8.0f, -1.8f, -0.01f);
+    public Vector3 startingLocation = new Vector3(-19.6f, 0.8f, -0.01f);
     public Vector3 travelerScale = new Vector3(4.85f, 4.85f, 4.85f);
 
 
-
+    private GameObject oldTraveler;
     Vector3 currentVelocity;
     private bool newTraveler;
     private BoxCollider2D boxCollider;
+
+    private bool movementVar;
+    private bool offMovementVar;
+    
 
     void Start()
     {
@@ -35,33 +42,49 @@ public class NPCController : MonoBehaviour
             travelerSprite = CreationLogic();
             newTraveler = false;
         }
+
+        if (movementVar)
+        {
+            MoveToPlayer();
+        }
+
+        if (offMovementVar)
+        {
+            MoveOffScreen();
+        }
     }
 
-    // public void MoveToPlayer()
-    // {
-    //     InvokeRepeating("Movement", 0f, 0.001f);
-    // }
-
-    // public void MoveOffScreen()
-    // {
-    //     transform.position = Vector3.SmoothDamp(transform.position, offScreenTarget, ref currentVelocity, smoothTime);
-    //     Destroy(gameObject, 2);
-    // }
-
-    public void MoveToPlayerShit()
+    public void MoveToPlayer()
     {
-        travelerSprite.transform.position += Vector3.right * 11.0f;
+        travelerSprite.transform.position = Vector3.MoveTowards(travelerSprite.transform.position, target, speed * Time.deltaTime);
     }
 
-    public void MoveOffScreenShit()
+    public async void MoveOffScreen()
     {
-        travelerSprite.transform.position += Vector3.right * 11.0f;
-        DestroyTraveler();
+        //GameObject oldTraveler = travelerSprite;
+        oldTraveler.transform.position = Vector3.MoveTowards(oldTraveler.transform.position, offScreenTarget, speed * Time.deltaTime);
+        await Task.Delay(2000);
+        DestroyTraveler(oldTraveler);
     }
 
-    public void DestroyTraveler()
+    public async void MovementFunction()
     {
-        Destroy(travelerSprite, 2);
+        movementVar = true;
+        await Task.Delay(2000);
+        movementVar = false;
+    }
+
+    public async void OffMovementFunction()
+    {
+        oldTraveler = travelerSprite;
+        offMovementVar = true;
+        await Task.Delay(2000);
+        offMovementVar = false;
+    }
+
+    public void DestroyTraveler(GameObject traveler)
+    {
+        Destroy(traveler, 2);
     }
 
     public void CreateTraveler()
@@ -84,10 +107,10 @@ public class NPCController : MonoBehaviour
     GameObject CreationLogic()
     {
         GameObject travelerSprite = new GameObject("NPC");
-        travelerSprite.tag = "NPC";
-        setupBoxCollider();
+        //travelerSprite.tag = "NPC";
+        //setupBoxCollider();
         SpriteRenderer renderer = travelerSprite.AddComponent<SpriteRenderer>();
-        renderer.sprite = GameAssets.i.TravelerSprite1;
+        renderer.sprite = travelerCharacter;
 
         travelerSprite.transform.localScale = travelerScale;
         travelerSprite.transform.position = startingLocation;
