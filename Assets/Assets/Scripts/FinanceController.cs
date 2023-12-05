@@ -9,6 +9,7 @@ using UnityEngine.Video;
 
 public class FinanceController : MonoBehaviour
 {
+    public static event Action OnPlayerGameOver;
     HazardController hazardController;
     public TextMeshProUGUI counterText;
     public TextMeshProUGUI savingsText;
@@ -33,10 +34,23 @@ public class FinanceController : MonoBehaviour
             counterText.text = money.ToString();
         }
 
+        // change here
         if (sceneName == "FamilyScene")
         {
             savingsText.text = "You have earned " + money.ToString() + " monis today";
             savingsText.text = "You have a a total of " + totalMoney.ToString() + " money";
+
+            // if money is less than x amount than invoke gameover menu
+            // otherwise  proceed to next level
+            if (totalMoney < 1000)
+            {
+
+                Debug.Log("gameover1");
+
+                OnPlayerGameOver?.Invoke();
+                //Time.timeScale = 0f;
+            }
+
         }
     }
 
@@ -45,11 +59,47 @@ public class FinanceController : MonoBehaviour
         return money;
     }
 
+    public void checkIfGameOver()
+    {
+        if (totalMoney < 1000)
+        {
+            OnPlayerGameOver?.Invoke();
+        }
+    }
+
+    // public void FinishDayFinance1()
+    // {
+    //     totalMoney = totalMoney + money;
+    //     // if money is less than x amount than invoke gameover menu
+    //     // otherwise  proceed to next level
+    //     if (totalMoney < 1000)
+    //     {
+
+    //         OnPlayerGameOver?.Invoke();
+    //         Time.timeScale = 0f;
+
+
+    //     }
+    //     else
+    //     {
+
+    //         UnityEngine.SceneManagement.Scene currentScene = SceneManager.GetActiveScene();
+    //         sceneName = currentScene.name;
+    //     }
+    // }
+
     public void FinishDayFinance()
     {
         totalMoney = totalMoney + money;
+        // if money is less than x amount than invoke gameover menu
+        // otherwise  proceed to next level
+
+
         UnityEngine.SceneManagement.Scene currentScene = SceneManager.GetActiveScene();
         sceneName = currentScene.name;
+
+
+
     }
 
     public void PlayerReward()
