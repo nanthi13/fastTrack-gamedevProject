@@ -258,7 +258,6 @@ public class FamilyMember
     public void StatusProgress()
     {
         float luck = UnityEngine.Random.Range(0, 10);
-        Debug.Log("Luck: " + luck);
         if (status == Status.Ok && luck <= 2.5)
         {
             Infect();
